@@ -1,0 +1,22 @@
+name: slurm
+summary: Realtime network interface monitor
+maintainer: smasoka <smasoka@ubuntuslurm.chpc.ac.za>
+description: |
+  Slurm has the following features: * realtime traffic statistics divided
+  into incoming and outgoing * optional combined view * can monitor any
+  kind of network interface * shows detailed statistics about the
+  interface. * it's themeable
+tags:
+  # Replace "misc" with one or more whitelisted tags from this list:
+  # https://jujucharms.com/docs/stable/authors-charm-metadata
+  - misc
+subordinate: false
+provides:
+  provides-relation:
+    interface: interface-name
+requires:
+  requires-relation:
+    interface: interface-name
+peers:
+  peer-relation:
+    interface: interface-name
