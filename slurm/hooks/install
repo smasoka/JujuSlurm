@@ -1,17 +1,8 @@
-#!/usr/bin/python
+#!/bin/bash
+# Here do anything needed to install the service
+# i.e. apt-get install -y foo  or  bzr branch http://myserver/mycode /srv/webroot
+# Make sure this hook exits cleanly and is idempotent, common problems here are
+# failing to account for a debconf question on a dependency, or trying to pull
+# from github without installing git first.
 
-import setup
-setup.pre_install()
-
-from charmhelpers.core import hookenv
-
-
-def install():
-    hookenv.log('Installing slurm')
-    # add steps for installing dependencies and packages here
-    # e.g.: from charmhelpers import fetch
-    #       fetch.apt_install(fetch.filter_installed_packages(['nginx']))
-
-
-if __name__ == "__main__":
-    install()
+apt-get install -y slurm
