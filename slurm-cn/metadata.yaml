@@ -1,0 +1,10 @@
+name: slurm-cn
+summary: Workload scheduler for compute nodes
+maintainer: smasoka <sakhile.harvey@gmail.com>
+description: |
+  Slurm is an open-source workload manager designed for Linux clusters of all sizes
+tags:
+  # Replace "misc" with one or more whitelisted tags from this list:
+  # https://jujucharms.com/docs/stable/authors-charm-metadata
+  - ops
+  - openstack
