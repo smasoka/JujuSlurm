@@ -28,5 +28,5 @@ copy_config_files(){
 }
 
 install_munge
-install_slurm
-copy_config_files
+#install_slurm
+#copy_config_files

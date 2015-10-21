@@ -1,10 +1,12 @@
 name: slurm
-summary: Workload Scheduler for server
+summary: Setup slurm server
 maintainer: smasoka <sakhile.harvey@gmail.com>
 description: |
-  Slurm is an open-source workload manager designed for Linux clusters of all sizes
+  Slurm is an open-source workload manager designed for Linux clusters of all sizes.
+  Installs mysql, munge and slurm.
+requires:
+  database:
+    interface: mysql
 tags:
-  # Replace "misc" with one or more whitelisted tags from this list:
-  # https://jujucharms.com/docs/stable/authors-charm-metadata
   - ops
   - openstack
