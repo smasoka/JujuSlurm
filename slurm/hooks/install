@@ -10,23 +10,23 @@ CWD=$(dirname $0)
 
 ## Install Munge and create the key
 install_munge(){
-	juju-log "Installing munge and creating the Key for server"
+	#juju-log "Installing munge and creating the Key for server"
 	apt-get -y install munge
 	create-munge-key 
 	service munge start 
 }
 
 install_slurm(){
-	juju-log "Installing slurm-llnl and slurm-llnl-slurmdbd packages"
+	#juju-log "Installing slurm-llnl and slurm-llnl-slurmdbd packages"
 	apt-get -y install slurm-llnl slurm-llnl-slurmdbd
 }
 
 copy_config_files(){
-	juju-log "Copying slurm.conf and slurmdbd.conf files"
+	#juju-log "Copying slurm.conf and slurmdbd.conf files"
 	cp $CWD/../templates/slurm.conf $SLURM_HOME/slurm.conf
 	cp $CWD/../templates/slurmdbd.conf $SLURM_HOME/slurmdbd.conf
 }
 
 install_munge
-#install_slurm
-#copy_config_files
+install_slurm
+copy_config_files

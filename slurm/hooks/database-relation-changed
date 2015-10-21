@@ -1,0 +1,15 @@
+#!/bin/bash -ex
+
+database=`relation-get database`
+user=`relation-get user`
+password=`relation-get password`
+dbhost=`relation-get host`
+
+if [ -z "$user" ]; then
+  juju-log "DB ccredentials not sent yet"
+  exit 0
+fi
+
+# Now I need to tell slurm how to connect to the database
+
+

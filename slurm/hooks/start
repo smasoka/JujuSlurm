@@ -2,6 +2,6 @@
 # Here put anything that is needed to start the service.
 # Note that currently this is run directly after install
 # i.e. 'service apache2 start'
-service munge restart
-service slurm-llnl restart
-service slurm-llnl-slurmdbd restart
+service munge restart || service munge start
+service slurm-llnl restart || service slurm-llnl start
+service slurm-llnl-slurmdbd restart || service slurm-llnl-slurmdbd start
