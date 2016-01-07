@@ -4,6 +4,9 @@ maintainer: smasoka <sakhile.harvey@gmail.com>
 description: |
   Slurm is an open-source workload manager designed for Linux clusters of all sizes.
   Installs slurm client
+provides:
+  computenode:
+    interface: slurm-cn
 tags:
   - ops
   - openstack

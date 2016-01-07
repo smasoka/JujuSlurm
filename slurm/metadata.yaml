@@ -7,6 +7,9 @@ description: |
 requires:
   database:
     interface: mysql
+  compute:
+    interface: slurm-cn
+    optional: true
 tags:
   - ops
   - openstack
