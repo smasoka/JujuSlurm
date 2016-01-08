@@ -17,6 +17,11 @@ install_munge(){
 	service munge start 
 }
 
+create_slurm_user(){
+	juju-log "creating slurm user and group"
+	useradd slurm
+}
+
 install_slurm(){
 	juju-log "Installing slurm-llnl and slurm-llnl-slurmdbd packages"
 	apt-get -y install slurm-llnl slurm-llnl-slurmdbd
@@ -29,5 +34,6 @@ copy_config_files(){
 }
 
 install_munge
+create_slurm_user
 install_slurm
 copy_config_files
